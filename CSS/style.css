@@ -1,9 +1,10 @@
 :root {
   --Primary: #212121;
-  --Secondary: #fafafa;
-  --Primary-2: #616161;
-  --Secondary-2: #EEEEEE; 
-  --Background: #f5f5f5;
+  --Secondary-Background: linear-gradient(135deg, #FF6F61, #ffd194);;
+  --Header-Background: linear-gradient(#FF6F61, #ffd194);
+  --Accent: #FF6F61;
+  --Text: rgb(51, 51, 51);
+  --Background: #FFFAF0;
 }
 
 * {
@@ -12,36 +13,40 @@
 }
 
 body {
-  background: var(--Secondary);
+  background-color: var(--Background);
+  color: var(--Text);
+  font-family: "Segoe UI", sans-serif;
 }
 
+/* Header */
 header {
-  color: var(--Secondary);
+  color: var(--Background);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
-  padding: 6rem 0 2rem;
-  background-image: url("../IMG/Banner-awal.jpeg");
+  padding: 8rem 0 4rem;
+  background: var(--Header-Background);
+  box-shadow: 0 4px 8px rgba(255, 209, 148, 1);
 }
 
 header h1 {
   font-size: 3rem;
 }
 
-/* About Me */
-.about-me {
-  background: var(--Secondary);
-  color: var(--Primary);
-  padding: 60px 36px;
-  gap: 5rem;
-  align-items: center;
+/* Profile */
+.profile {
   text-align: center;
-  justify-content: center;
-  margin: 0 200px;
+  padding: 3rem 0;
+}
+
+.profile .about-me {
+  margin-top: 20px;
+  margin: 0 300px;
 }
 
 .about-me img {
   width: 250px;
   border-radius: 100%;
-  margin-bottom: 30px;
+  margin: 20px 0;
 }
 
 .about-me .description {
@@ -51,77 +56,88 @@ header h1 {
 /* Strength */
 .strength {
   text-align: center;
-  border-top: 1px solid var(--Primary);
-  padding: 30px 0 60px;
-  background: linear-gradient(var(--Primary), var(--Primary-2));
+  background: var(--Secondary-Background);
+  padding: 3rem 0;
 }
-
-.strength h2 {
-    font-size: 2rem;
-    color: var(--Secondary);
+.strength h1 {
+  color: var(--Background);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .strength .skill {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  text-align: center;
-  padding: 3rem 15rem 0;
+  display: flex;
   gap: 5rem;
+  justify-content: center;
+  align-items: stretch; 
+  margin: 20px 15rem 0;
 }
 
-.skill section {
+.strength .skill section {
   background: var(--Background);
-  border-radius: 5px;
+  color: var(--Text);
+  border-radius: 10px;
   text-align: center;
+  width: 15rem;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.skill section i {
+.strength .skill .word {
+  transition: 0.3s ease;
+}
+
+.strength .skill .excel {
+  transition: 0.3s ease;
+}
+
+.strength .skill .accounting {
+  transition: 0.3s ease;
+}
+
+.strength .skill section i {
   margin: 0 0 30px;
   font-size: 4rem;
 }
 
-/* Hobbies */
-.hobbies {
+/* Contact */
+.contact {
+  padding: 3rem 0;
   text-align: center;
-  padding: 30px 0 60px;
 }
 
-.hobbies h2 {
-    font-size: 2rem;
-}
-
-.hobbies .list {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: auto auto auto;
+.contact .content {
+  display: flex;
+  justify-content: center;
   gap: 5rem;
-  padding: 3rem 5rem 0;
-}
-
-.hobbies .list section {
-  background: linear-gradient(var(--Primary), var(--Primary-2));
-  color: var(--Secondary);
+  align-items: stretch; 
+  margin: 20px 15rem 0;
   text-align: center;
-  padding: 2rem;
+}
+
+.contact .content section {
   border-radius: 5px;
+  text-align: center;
+  width: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid var(--Text);
+  border-style: dashed;
 }
 
-.hobbies .list img {
-    width: 200px;
-    height: 200px; 
-    border-radius: 5px;
-    border: 1px solid var(--Secondary);
-}
-
-.hobbies .list section h3 {
-    font-size: 1.5rem;
+.contact .content section i {
+  font-size: 4rem;
+  margin-bottom: 20px;
 }
 
 /* Footer */
 footer {
-    background: var(--Primary);
-    color: var(--Secondary);
-    padding: 30px 0;
-    text-align: center;
+  background: var(--Secondary-Background);
+  color: var(--Background);
+  padding: 30px 0;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
